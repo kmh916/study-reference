@@ -4,10 +4,6 @@
 
 
 
-# Spring Framework
-- [[10분 테코톡] 🦊닉의 Spring vs Spring Boot](https://youtu.be/6h9qmKWK6Io)
+### - [Spring Framework](https://github.com/kmh916/study-reference/tree/master/spring-framework)
 
-# Architecture
-- [배달의민족 마이크로서비스 여행기](https://youtu.be/BnS6343GTkY)
-- [[10분 테코톡] 정의 REST API](https://youtu.be/Nxi8Ur89Akw)
-- [그런 REST API로 괜찮은가](https://youtu.be/RP_f5dMoHFc)
+### - [Architecture](https://github.com/kmh916/study-reference/tree/master/Architecture)
