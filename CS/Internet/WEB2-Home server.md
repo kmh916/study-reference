@@ -1,4 +1,4 @@
-# WEB2-Home server [[youtube]](https://youtube.com/playlist?list=PLuHgQVnccGMA52uRBmSwqcvtI5IMoFclJ)
+# WEB2-Home server (22.08.03)[[youtube]](https://youtube.com/playlist?list=PLuHgQVnccGMA52uRBmSwqcvtI5IMoFclJ)
 <details>
 <summary>1. 수업소개</summary>
 <div markdown="1">
