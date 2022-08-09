@@ -60,12 +60,36 @@
   각 프로세스는 독립적이고 개별적으로 메모리를 차지하며 IPC를 통해 자원을 공유한다.
   Context Switching 비용이 비교적 크게 발생한다. 각 프로세스가 독립적이기 때문에 
   안전성이 높은 장점이 있다. 
-  멀티프로세스 프로그램의 예 : Chrome
+  
+  <details>
+  <summary>ex ) Chrome</summary>
+<div markdown="1">
+
+  ### 온몸으로 멀티 프로세스라는걸 어필중인 크롬
+  
+  ![image](https://user-images.githubusercontent.com/94831670/183689082-d3dd4a2f-f328-4208-89d1-5905389bc5d7.png)
+</div>
+</details>
+  
   
   ### 멀티 스레드
+  프로세스를 생성하기 위한 시스템 콜이 줄어들고 스레드간 자원을 공유하기 때문에 
+  효율적인 통신 및 작업 처리가 가능하다. 자원을 공유하기 때문에 동기화 문제가 발생하고
+  하나의 스레드에 문제가 생기면 전체 프로세스에 영향을 끼친다.
+<details>
+<summary>이런 문제...</summary>
+<div markdown="1">
+
+  ### IE에서 하나의 스레드가 문제가 생기면 IE의 모든 탭이 먹통이 된다.
   
+  ![image](https://user-images.githubusercontent.com/94831670/183689428-f9750c02-4832-434c-b040-c01b765261bc.png)
+</div>
+</details>
+
   
+
   
+
   
   
   
