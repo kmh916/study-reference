@@ -138,8 +138,10 @@ public class SingleLinkedList<T>{
 ![image](https://user-images.githubusercontent.com/94831670/185850997-182e6284-824c-4ba6-a7d4-9bd9c18f871e.png)
 
 이중 연결 리스트는 포인터가 이전 노드와 다음 노드의 주소를 모두 가르킨다. 
+	
 또한 연결 리스트가 맨 앞과 맨 뒤 노드를 가지고 있어 양방향의 탐색이 가능하다.
 (양방향)
+	
 **시간 복잡도**
 
 삽입,삭제 : 대상이 맨 앞,맨 뒤(head,tail) 노드일 경우 O(1) 아닐경우 O(N)
