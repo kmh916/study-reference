@@ -3,7 +3,7 @@
 <summary>1. 수업소개</summary>
 <div markdown="1">
 
-본 강의는 나의 컴퓨터를 서버로 이용하는 방법을 배우고 그 과정에서 필요한 많은 네트워크 기술들을 학습하게 됩니다. 
+본 강의는 나의 컴퓨터를 서버로 사용하는 방법을 배우고 그 과정에서 필요한 많은 네트워크 기술들을 학습하는 것을 목표로 합니다.
   
 ### IPv4 
 전화를 하기 위해서 전화번호가 필요한 것 처럼 인터넷에 연결된 컴퓨터들간에 
@@ -43,7 +43,7 @@ WAN 의 IP 주소를 Public IP(공인 ip) LAN 의 IP 주소를 Private IP(사설
 
 ### 검증?
 앞선 강의의 내용대로라면 같은 와이파이를 사용중인 노트북과 스마트폰은 같은 Public IP를 사용해야 한다.
-혹시나 문제가 될까봐 올리진 못하겠는데 확인해봤더니 같은 Public IP 를 사용중이였다.
+확인해봤더니 정말로 같은 Public IP 를 사용중이였다.
 
 
 </div>
@@ -55,9 +55,9 @@ WAN 의 IP 주소를 Public IP(공인 ip) LAN 의 IP 주소를 Private IP(사설
   
   ### NAT란?
   LAN에서 외부 인터넷, 예를 들어 구글에 접속하기 위해서는 나의 요청이 외부 DNS서버 까지
-  도달해야 할것이다. 요청이 라우터(공유기)를 통해 DNS 서버에 도달하여 구글의 IP 주소를 
-  요청할때 라우터에서는 나의 private IP를 공유기의 public IP로 변환하여 요청한다.
-  이 기술을 NAT라고 한다.  
+  도달해야 할것이다. 요청이 공유기를 통해 DNS 서버에 도달하여 구글의 IP 주소를 
+  요청할때 , 공유기는 나의 인터넷 기기의 private IP를 공유기의 public IP로 변환하여 요청한다.
+  이 기술을 NAT(Network Address Translation)라고 한다.  
   
   ### NAT의 장점?
   - private IP가 변환되므로 외부로 부터 private IP를 감출수있다.
@@ -71,7 +71,7 @@ WAN 의 IP 주소를 Public IP(공인 ip) LAN 의 IP 주소를 Private IP(사설
 <div markdown="1">
   
 나의 컴퓨터를 서버로 사용하기 위해서는 
-외부에서 나의 라우터의 public IP로 들어온 요청이 나의 private IP로 연결되어야 한다.
+외부에서 나의 공유기의 public IP로 들어온 요청이 나의 private IP로 연결되어야 한다.
 이를 위해서는 포트 포워딩이라는 기술을 사용해야하고 포트가 무엇인지를 먼저 알아야 한다.
 
   ### port
@@ -82,11 +82,12 @@ WAN 의 IP 주소를 Public IP(공인 ip) LAN 의 IP 주소를 Private IP(사설
 </details>
 
 <details>
-<summary>6. port forwarding</summary>
+<summary>6. 포트 포워딩 (port forwarding)</summary>
 <div markdown="1">
   
-  나의 라우터의 public IP로 들어온 요청이 내 컴퓨터의 private IP로 연결되기 위해서는
-  public IP의 특정 포트로 들어온 요청을 나의 private IP로 포트포워딩 시켜주면 된다.
+  나의 컴퓨터로 3000번 포트로 웹 서버를 띄운뒤 외부에서 http프로토콜(80포트)로 접근 할수 있게 하려고 하려면 어떻게 해야할까?
+  외부에선 나의 public IP만 알고 있기 때문에 public IP의 80포트로 요청을 할 것이고 공유기가 이 요청을 받아 나의 private IP의 3000번 포트로 요청을 보내준다면
+  외부에서 나의 웹서버에 접근할 수 있게된다.  이러한 전달 기술을 포트 포워딩이라고 한다.
   
   ### 포트 포워딩이란?
   [위키](https://ko.wikipedia.org/wiki/%ED%8F%AC%ED%8A%B8_%ED%8F%AC%EC%9B%8C%EB%94%A9)
@@ -107,7 +108,7 @@ WAN 의 IP 주소를 Public IP(공인 ip) LAN 의 IP 주소를 Private IP(사설
   -> Static IP
   
 
-  예시) AWS에서 EC2 인스턴스를 생성하고 인스턴스를 부팅할때 마다 IP가 바뀌는데(Dynamic IP) 탄력적 IP(Static IP)를 연결하면 IP 주소가 고정된다.
+  예시) AWS에서 EC2 인스턴스를 생성하고 인스턴스를 부팅할때 마다 IP가 바뀌는데(Dynamic IP) 탄력적 IP(Static IP - Elastic IP)를 연결하면 IP 주소가 고정된다.
 
 
 
